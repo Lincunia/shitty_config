@@ -1,0 +1,13 @@
+=============================
+THESE ARE JUST PROGRAMS FOR MY DAILY USE
+=============================
+mpv
+nano
+pcmanfm
+ristretto
+KDE partition manager
+=============================
+REPOSITORIES
+=============================
+https://github.com/adi1090x/plymouth-themes.git
+https://github.com/int3/open-syobon-action.js.git
