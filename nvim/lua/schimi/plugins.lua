@@ -62,7 +62,10 @@ return packer.startup(function(use)
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
-		"mhartington/formatter.nvim",
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
 	})
 
 	-- AESTHETIC
@@ -70,7 +73,8 @@ return packer.startup(function(use)
 		"nvim-tree/nvim-tree.lua",
 		"nvim-tree/nvim-web-devicons",
 		"nvim-lualine/lualine.nvim",
-		"rebelot/kanagawa.nvim", -- (I just liked it)
+		"catppuccin/nvim",
+		as = "catppuccin",
 	})
 
 	-- Completion
@@ -89,7 +93,7 @@ return packer.startup(function(use)
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
-  tag = '0.1.4',
+		tag = "0.1.4",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
