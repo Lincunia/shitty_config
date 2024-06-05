@@ -56,16 +56,17 @@ return packer.startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
-
+	vim.cmd("let g:mkdp_browser = 'qutebrowser'")
 	-- Mason
 	use({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
-    "stevearc/conform.nvim",
-    config = function()
-      require("conform").setup()
-    end,
+		"LittleEndianRoot/mason-conform",
+		"stevearc/conform.nvim",
+		config = function()
+			require("conform").setup()
+		end,
 	})
 
 	-- AESTHETIC
@@ -86,7 +87,7 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets",
 	})
 
-	-- Tabsmoment--
+	-- Tabs moment--
 	-- use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
 	use("romgrk/barbar.nvim")
 
@@ -103,4 +104,3 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-
