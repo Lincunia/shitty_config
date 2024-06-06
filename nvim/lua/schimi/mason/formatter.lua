@@ -1,12 +1,13 @@
-require('mason-conform').setup({
+require('mason-tool-installer').setup {
   ensure_installed = {
-    "stylua",
-    "prettier",
-    "latexindent",
-    "isort",
-    "clang-format"
-  },
-})
+		"stylua",
+		"prettier",
+		"latexindent",
+		"isort",
+		"clang-format",
+	},
+}
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },

@@ -10,3 +10,6 @@ one of these:
  * [AstroNvim](https://astronvim.com/)
  * [LunarVim dotfiles](https://github.com/LunarVim/Neovim-from-scratch/)
  * [CosmicNvim](https://github.com/CosmicNvim/CosmicNvim)
+
+And here you have my browser:
+ * [Qutebrowser](https://qutebrowser.org/) 
