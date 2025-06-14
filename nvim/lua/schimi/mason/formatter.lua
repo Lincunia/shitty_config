@@ -1,27 +1,36 @@
-require('mason-tool-installer').setup {
-  ensure_installed = {
+require("mason-tool-installer").setup({
+	ensure_installed = {
 		"stylua",
 		"prettier",
 		"latexindent",
 		"isort",
 		"clang-format",
 	},
-}
+})
 
 require("conform").setup({
+	notify_on_error = true,
 	formatters_by_ft = {
 		lua = { "stylua" },
 		cpp = { "clang_format" },
 		cc = { "clang_format" },
 		c = { "clang_format" },
 		java = { "clang_format" },
-		python = { "isort", "black" },
-		latex = { "latexindent" },
-		javascript = { { "prettierd", "prettier" } },
-		html = { { "prettierd", "prettier" } },
-		css = { { "prettierd", "prettier" } },
-		json = { { "prettierd", "prettier" } },
-		markdown = { { "prettierd", "prettier" } },
+		python = { "isort" },
+		tex = { "latexindent" },
+		javascript = { "prettier" },
+		html = { "prettier" },
+		css = { "prettier" },
+		json = { "prettier" },
+		markdown = { "prettier" },
+	},
+	formatters = {
+		clang_format = {
+			prepend_args = { "--style={BasedOnStyle: GNU, IndentWidth: 4}" }
+		},
+        prettier = {
+			prepend_args = { "--tab-width 4", "--use-tabs" }
+		}
 	},
 })
 

@@ -16,6 +16,8 @@ settings:
       w: session-save
       wq: quit --save
       wqa: quit --save
+  auto_save.interval:
+    global: 10
   bindings.commands:
     global:
       normal:
@@ -35,13 +37,23 @@ settings:
   colors.webpage.preferred_color_scheme:
     global: auto
   completion.cmd_history_max_items:
-    global: 0
+    global: 10
+  completion.open_categories:
+    global:
+    - searchengines
+    - quickmarks
+    - history
+    - bookmarks
+    - filesystem
   completion.web_history.max_items:
-    global: 0
+    global: 10
+  content.autoplay:
+    global: false
   content.blocking.adblock.lists:
     global:
     - https://easylist.to/easylist/easylist.txt
     - https://easylist.to/easylist/easyprivacy.txt
+    - https://blocklistproject.github.io/Lists/abuse.txt
     - https://blocklistproject.github.io/Lists/ads.txt
     - https://blocklistproject.github.io/Lists/porn.txt
     - https://blocklistproject.github.io/Lists/malware.txt
@@ -49,16 +61,81 @@ settings:
     - https://blocklistproject.github.io/Lists/tiktok.txt
     - https://blocklistproject.github.io/Lists/everything.txt
     - https://blocklistproject.github.io/Lists/tracking.txt
+    - https://blocklistproject.github.io/Lists/scam-nl.txt
+    - https://github.com/yokoffing/filterlists/blob/main/annoyance_list.txt
+    - https://github.com/hagezi/dns-blocklists/blob/main/adblock/spam-tlds-ublock.txt
+    - https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt
+    - https://github.com/iam-py-test/my_filters_001/blob/main/antimalware.txt
   content.blocking.hosts.lists:
     global:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
   content.cache.size:
     global: 0
   content.cookies.accept:
-    global: never
+    global: no-3rdparty
   content.cookies.store:
     global: false
-  fonts.web.family.sans_serif:
+  content.headers.do_not_track:
+    global: true
+  content.notifications.enabled:
+    https://juttadolle.com: false
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: false
+  content.webgl:
+    global: false
+  fonts.contextmenu:
     global: null
+  fonts.default_family:
+    global: 3270 Nerd Font Mono
+  fonts.default_size:
+    global: 11pt
+  fonts.hints:
+    global: bold default_size default_family
+  fonts.keyhint:
+    global: default_size default_family
+  fonts.messages.error:
+    global: default_size default_family
+  fonts.messages.info:
+    global: default_size default_family
+  fonts.messages.warning:
+    global: default_size default_family
+  fonts.prompts:
+    global: default_size sans-serif
+  fonts.tabs.unselected:
+    global: default_size default_family
+  fonts.tooltip:
+    global: null
+  fonts.web.family.cursive:
+    global: Iosevka Nerd Font Italic
+  fonts.web.family.fantasy:
+    global: 3270 Nerd Font Mono
+  fonts.web.family.fixed:
+    global: Iosevka Nerd Font
+  fonts.web.family.sans_serif:
+    global: FantasqueSansM Nerd Font
+  fonts.web.family.serif:
+    global: FantasqueSansM Nerd Font
+  fonts.web.family.standard:
+    global: FantasqueSansM Nerd Font
+  fonts.web.size.default:
+    global: 16
+  fonts.web.size.minimum_logical:
+    global: 5
+  history_gap_interval:
+    global: -1
+  logging.level.ram:
+    global: info
+  scrolling.bar:
+    global: overlay
+  statusbar.widgets:
+    global:
+    - keypress
+    - search_match
+    - url
+    - scroll
+    - history
+    - tabs
+    - progress
   url.start_pages:
     global: https://start.duckduckgo.com
+

@@ -4,7 +4,7 @@ local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
-local builtin = require('telescope.builtin')
+local builtin = require("telescope.builtin")
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -100,12 +100,12 @@ keymap("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
 keymap("n", "<Space>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
 keymap("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 
--- FORMATTER -- 
+-- FORMATTER --
 keymap("n", "<Space>f", ":Format<CR>", opts)
 keymap("n", "<Space>F", ":FormatWrite<CR>", opts)
 
--- TELESCOPE -- 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- TELESCOPE --
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})

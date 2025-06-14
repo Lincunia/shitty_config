@@ -8,7 +8,7 @@ configuration, you can't access to your email... maybe I would try to use
 thunderbird, but I'm lazy to do that :P
 
 By the way, I recommend this
-[site reommended by RMS](https://spyware.neocities.org/articles/firefox)
+[site recommended by RMS](https://spyware.neocities.org/articles/firefox)
 to convert firefox into a web browser "free" of malware. It worked for me to my
 day by day navigation avoiding unwilling actions.
 

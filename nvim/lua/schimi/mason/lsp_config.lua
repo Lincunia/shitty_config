@@ -2,7 +2,7 @@ require("mason").setup({
 	ui = {
 		icons = {
 			package_installed = "✔ ",
-			package_pending = "",
+			package_pending = " ",
 			package_uninstalled = "⨯ ",
 		},
 	},
@@ -11,7 +11,7 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
 		"clangd",
-		"ltex",
+		"texlab",
 		"cssls",
 		"pylsp",
 		"denols",
@@ -27,13 +27,7 @@ require("lspconfig").denols.setup({ capabilities })
 require("lspconfig").clangd.setup({ capabilities })
 require("lspconfig").cssls.setup({ capabilities })
 require("lspconfig").kotlin_language_server.setup({ capabilities })
-require("lspconfig").ltex.setup({
-	settings = {
-		ltex = {
-			language = "auto",
-		},
-	},
-})
+require("lspconfig").texlab.setup({ capabilities })
 
 -- Just because of the annoying "Undefined global `vim`"
 require("lspconfig").lua_ls.setup({
@@ -60,4 +54,5 @@ require("lspconfig").lua_ls.setup({
 require("lspconfig").pylsp.setup({ capabilities })
 require("lspconfig").jdtls.setup({ capabilities })
 
--- ...
+vim.diagnostic.config({ virtual_text = true })
+vim.lsp.set_log_level("debug")
